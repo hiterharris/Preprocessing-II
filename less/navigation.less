@@ -22,4 +22,25 @@ nav {
             font-size: 20px;
         }
     }
+
+    @media @mobile {
+        flex-direction: column;
+        padding: 4% 0% 0% 0%;
+
+        .nav-logo {
+            width: 100%;
+            font-size: 32px;
+            margin: 2%;
+        }
+
+        .nav-menu {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            
+            p {
+                font-size: 16px;
+            }
+        }
+    }
 }

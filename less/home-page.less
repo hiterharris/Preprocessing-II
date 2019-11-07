@@ -1,19 +1,47 @@
-.home {
+header {
+  .fun-bus {
+    text-align: center;
 
+    img {
+        width: 60%;
+        margin-bottom: 2%;
+    }
+  }
+
+  .welcome {
+    max-width: 1200px;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 2%;
+    border-bottom: 4px dashed lightgrey;
+  }
+
+  @media @mobile {
+    .fun-bus img, .welcome {
+      width: 80%;
+    }
+  }
+}
+
+.home {
+  
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     
     .text-content {
-      width: 48%;
-      padding-right: 1%;
+      width: 50%;
+      padding-right: 10%;
+    }
+
+    p {
+      line-height: 30px;
     }
 
     .img-content {
-      padding-left: 1%;
-
+      
       img {
         border-radius: 10px;
       }
@@ -21,57 +49,81 @@
   }
 
   .inverse-content {
-    padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
 
     .text-content {
-      padding-left: 1%;
-      padding-right: 0;
+      padding-left: 10%;
+      padding-right: 0%;
     }
 
     .img-content {
-      padding-right: 1%;
       padding-left: 0;
     }
   }
 
   .content-destination {
-    width: 75%;
+    border-top: 2px dashed @navigation-border;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto 30px;
+    padding: 3% 12% 0% 12%;
 
     img {
       border-radius: 10px;
     }
+
+    @media @mobile {
+      width: 100%;
+    }
   }
 
   .content-pick {
-    padding-top: 30px;
+    margin: 2% 8%;
+    padding-top: 2%;
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-
+    
     .destination {
-      width: 30%;
+      width: 25%;
       margin-bottom: 30px;
     }
+
+    @media @mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 10%;
+
+      .destination {
+        width: 90%;
+        margin-bottom: 30px;
+
+        .btn {
+          .flex(center, center);
+          width: 100%;
+          height: 45px;
+          background-color: #17A1B8;
+          border-radius: 15px;
+          .font(white, 'Roboto', 20px)
+      }
+      }
+    }
   }
-}// home
 
-header {
-  .fun-bus {
-  text-align: center;
+  @media @mobile {
+    .content-section {
+      justify-content: center;
 
-  img {
-      width: 72%;
-      margin-bottom: 2%;
+      .text-content {
+        width: 80% !important;
+        padding-left: 0%;
+      }
+    }
+
+    .inverse-content {
+      flex-wrap: wrap-reverse !important;
+    }
   }
 }
 
-.welcome {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding-bottom: 1%;
-    border-bottom: 4px dashed lightgrey;
-  }
-}
+
