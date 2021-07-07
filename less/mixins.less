@@ -1,1 +1,21 @@
 // Mixins in here
+.flex(@jc, @ai) {
+    display: flex;
+    justify-content: @jc;
+    align-items: @ai;
+}
+
+.font(@color, @family, @size) {
+    color: @color;
+    font-family: @family;
+    font-size: @size;
+}
+
+.btn {
+    .flex(center, center);
+    width: 95%;
+    height: 50px;
+    background-color: #008080;
+    border-radius: 15px;
+    .font(white, 'Roboto', 20px)
+}
